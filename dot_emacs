@@ -1,0 +1,15 @@
+(add-hook
+ 'sgml-mode-hook
+ (lambda ()
+   (setq
+    sgml-basic-offset 8
+    )))
+
+(defun my-c-mode-common-hook ()
+   (c-set-style "linux") (setq indent-tabs-mode t) ;linux 式がいいとき
+)
+(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)
+(defun my-c++-mode-common-hook ()
+   (c++-set-style "linux") (setq indent-tabs-mode t) ;linux 式がいいとき
+)
+(add-hook 'c++-mode-common-hook 'my-c++-mode-common-hook)
